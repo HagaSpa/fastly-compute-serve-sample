@@ -1,0 +1,16 @@
+# This file describes a Fastly Compute package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["justicesparrow13@gmail.com"]
+description = "My First Fastly Compute Service"
+language = "javascript"
+manifest_version = 3
+name = "fastly-compute-service-sample"
+service_id = "y97gT23WwmhKjxEqbhVI00"
+
+[scripts]
+  build = "npm run build"
+  post_init = "npm install"
+
+[local_server.backends."hagaspa_backend"]
+  url = "http://localhost:8080"
